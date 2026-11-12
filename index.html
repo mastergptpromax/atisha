@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    .rainbow-text {
+      font-size: 40px;
+      font-weight: bold;
+      /* เพิ่มสีแดงปิดท้ายเพื่อให้สีไหลวนลูปได้เนียนไม่สะดุด */
+      background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet, red);
+      /* ขยายความกว้างพื้นหลังให้ใหญ่ขึ้นเพื่อให้เลื่อนตำแหน่งได้ */
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      color: transparent;
+      display: inline-block;
+      /* สั่งให้เล่นแอนิเมชันชื่อ rainbow-flow วนไปเรื่อยๆ */
+      animation: rainbow-flow 3s linear infinite;
+    }
+
+    /* กำหนดการเคลื่อนที่ของสีจากซ้ายไปขวา */
+    @keyframes rainbow-flow {
+      0% {
+        background-position: 0% center;
+      }
+      100% {
+        background-position: 200% center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="rainbow-text">ใครถาม</div>
+</body>
+</html>
